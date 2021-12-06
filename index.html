@@ -22,6 +22,20 @@
             <span v-show="changePercent < 0"><i class="fas fa-thumbs-down"></i></span>
             <span v-show="changePercent == 0"><i class="fab fa-bitcoin"></i></span>
         </p>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li v-for="(price,index) in prices" v-bind:key="price">{{ index }} - {{ price }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li v-for="(price,index) in pricesWithDays" v-bind:key="price.day">{{ price.day }} {{ price.value }}</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
