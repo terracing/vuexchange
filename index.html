@@ -50,8 +50,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-
+            <div class="col-6">
+                <form action="">
+                    <div class="col">
+                        <label for="" class="form-label">MXN to BTC</label>
+                        <input type="number" v-model="value" class="form-control">
+                        <p class="text-info text-end p-2">{{ convertedValue }}</p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
