@@ -5,7 +5,8 @@ new Vue({
         return {
             name: 'Bitcoin',
             img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
-            changePercent: 10,
+            changePercent: -10,
+            priceBtc: 7850,
             prices: [8400,5200,7460,5520,7990],
             pricesWithDays: [
                 {day: 'Monday', value: 8400},
