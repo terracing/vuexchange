@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-6">
                 <p><img v-bind:src="img" v-bind:alt="name" height="100" v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices"></p>
-                <h1>{{ name }}</h1>
+                <h1>{{ title }}</h1>
             </div>
             <div class="col-6">
                 <p class="p-2 text-end fs-2"><a href="#" v-on:click="toggleDarkMode"><i v-bind:class="darkState ? 'fas fa-moon' : 'fas fa-sun'"></i></a></p>
