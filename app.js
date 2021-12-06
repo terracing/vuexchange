@@ -15,7 +15,15 @@ new Vue({
                 {day: 'Friday', value: 7990},
                 {day: 'Saturday', value: 6385},
                 {day: 'Sunday', value: 7850}
-            ]
+            ],
+
+            showPrices: false,
         }
+    },
+
+    methods: {
+        toggleShowPrices () {
+            this.showPrices = !this.showPrices
+        } 
     }
 })

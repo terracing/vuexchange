@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app" class="container">
-        <p class="mt-4"><img v-bind:src="img" v-bind:alt="name" height="100"></p>
+        <p class="mt-4"><img v-bind:src="img" v-bind:alt="name" height="100" v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices"></p>
         <h1>
             {{ name }}
         </h1>
@@ -22,18 +22,25 @@
             <span v-show="changePercent < 0"><i class="fas fa-thumbs-down"></i></span>
             <span v-show="changePercent == 0"><i class="fab fa-bitcoin"></i></span>
         </p>
+
+        <p>ver precios <a href="#" v-on:click="toggleShowPrices"><i v-bind:class="showPrices ? 'fas fa-eye-slash' : 'fas fa-eye'"></i></a></p>
         <div class="row">
             <div class="col">
-                <ul>
+                <ul v-show=showPrices>
                     <li v-for="(price,index) in prices" v-bind:key="price">{{ index }} - {{ price }}</li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <ul>
+                <ul v-show=showPrices>
                     <li v-for="(price,index) in pricesWithDays" v-bind:key="price.day">{{ price.day }} {{ price.value }}</li>
                 </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
             </div>
         </div>
     </div>
