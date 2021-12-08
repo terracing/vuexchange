@@ -31,6 +31,7 @@ Vue.component('CoinDetail', {
             <img v-bind:src="coin.img" v-bind:alt="coin.name" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">{{ title }}</h5>
+                <slot name="link"></slot>
                 <p>show prices <a href="#" v-on:click="toggleShowPrices"><i
                     v-bind:class="showPrices ? 'fas fa-eye-slash' : 'fas fa-eye'"></i></a></p>
                 <ul class="list-group" v-show=showPrices>
@@ -40,6 +41,7 @@ Vue.component('CoinDetail', {
                         {{ price.day }} {{ price.value }}
                     </li>
                 </ul>
+                <slot name="text"></slot>
                 <footer>
                     <form action="">
                         <div class="col">

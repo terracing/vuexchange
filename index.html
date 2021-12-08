@@ -19,7 +19,10 @@
                             v-bind:class="darkState ? 'fas fa-moon' : 'fas fa-sun'"></i></a></p>
             </div>
         </div>
-        <coin-detail v-on:change-color="changeColor" v-bind:coin="btc" ></coin-detail>
+        <coin-detail v-on:change-color="changeColor" v-bind:coin="btc" >
+            <template v-slot:text><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, optio debitis id fugiat aliquid aperiam odio enim maiores tempore fugit voluptatibus in ratione officia architecto ipsum sapiente beatae? Libero, facere!</p></template>
+            <template v-slot:link><a href="#">Link!</a></template>
+        </coin-detail>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
