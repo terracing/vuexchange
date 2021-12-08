@@ -9,6 +9,7 @@ Vue.component('CoinDetail', {
     methods: {
         toggleShowPrices() {
             this.showPrices = !this.showPrices
+            this.$emit('change-color','770000')
         }
     },
     computed: {
@@ -76,6 +77,9 @@ new Vue({
         toggleDarkMode() {
             this.color = this.color.split('').reverse().join('')
             this.darkState = !this.darkState
+        },
+        changeColor(color) {
+            this.color = color
         }
     }
 })

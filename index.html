@@ -19,7 +19,7 @@
                             v-bind:class="darkState ? 'fas fa-moon' : 'fas fa-sun'"></i></a></p>
             </div>
         </div>
-        <coin-detail v-bind:coin="btc" ></coin-detail>
+        <coin-detail v-on:change-color="changeColor" v-bind:coin="btc" ></coin-detail>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
