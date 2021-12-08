@@ -75,6 +75,13 @@ new Vue({
             darkState: false
         }
     },
+
+    created() {
+        console.log('created')
+    },
+    mounted() {
+        console.log('mounted')
+    },
     methods: {
         toggleDarkMode() {
             this.color = this.color.split('').reverse().join('')
