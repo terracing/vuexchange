@@ -1,18 +1,15 @@
 <template>
-  <div id="app" class="bg-gray-200">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app" class="container mx-auto bg-gray-200">
+    <vx-header />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import VxHeader from "@/components/VxHeader"
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { VxHeader },
 };
 </script>
 
