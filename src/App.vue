@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import VxHeader from "@/components/VxHeader"
+import VxHeader from "@/components/VxHeader";
 
 export default {
   name: "App",
@@ -16,6 +16,5 @@ export default {
 
 <style>
 #app {
-  
 }
 </style>

@@ -28,36 +28,61 @@
         <td>
           <strong># {{ a.rank }}</strong>
         </td>
-        <td>{{ a.name }}</td>
+        <td>
+          <router-link
+            :to="{ name: 'coin-detail', params: { id: a.id } }"
+            class="hover:text-green-800 hover:underline"
+            >{{ a.name }} </router-link
+          ><small class="ml-1 text-gray-500">{{ a.symbol }}</small>
+        </td>
         <td>{{ a.priceUsd | dollar }}</td>
         <td>{{ a.marketCapUsd | dollar }}</td>
-        <td :class="a.changePercent24Hr.includes('-') ? 'text-red-700' : 'text-green-700'">{{ a.changePercent24Hr | percent }}</td>
-        <td class="hidden sm:block"></td>
+        <td
+          :class="
+            a.changePercent24Hr.includes('-')
+              ? 'text-red-700'
+              : 'text-green-700'
+          "
+        >
+          {{ a.changePercent24Hr | percent }}
+        </td>
+        <td class="hidden sm:block">
+          <vx-button @custom-click="goToCoin(a.id)">Details</vx-button>
+        </td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+import VxButton from "@/components/VxButton";
 export default {
-  name: 'PxAssetsTable',
+  name: "PxAssetsTable",
+
+  components: { VxButton },
 
   props: {
     assets: {
       type: Array,
-      default: () => []
-    }
-  }
-}
+      default: () => [],
+    },
+  },
+
+  methods: {
+    goToCoin(id) {
+      this.$router.push({ name: "coin-detail", params: { id } });
+    },
+  },
+};
 </script>
 
 <style scoped>
 .up::before {
-  content: '👆';
+  content: "👆";
 }
 
 .down::before {
-  content: '👇';
+  content: "👇";
 }
 
 td {

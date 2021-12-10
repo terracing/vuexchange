@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import api from "@/api"
+import api from "@/api";
 import VxAssetsTable from "@/components/VxAssetsTable";
 
 export default {
@@ -13,12 +13,11 @@ export default {
   components: { VxAssetsTable },
   data() {
     return {
-      assets: []
-    }
+      assets: [],
+    };
   },
   created() {
-    api.getAssets()
-      .then(assets => (this.assets = assets))
-  }
+    api.getAssets().then((assets) => (this.assets = assets));
+  },
 };
 </script>
