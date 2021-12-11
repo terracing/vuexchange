@@ -11,6 +11,13 @@
       </router-link>
     </h1>
     <nav class="w-2/3 flex justify-end">
+      <router-link
+        v-for="l in links"
+        :key="l.title"
+        :to="l.to"
+        class="inline-block mx-2"
+        >{{ l.title }}</router-link
+      >
       <ul class="text-gray-300">
         <li class="inline-block mx-2">
           <a href="/about" class="p-2">acerca de</a>
@@ -20,3 +27,16 @@
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  name: "VxHeader",
+
+  props: {
+    links: {
+      type: Array,
+      default: () => [],
+    },
+  },
+};
+</script>

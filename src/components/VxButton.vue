@@ -1,7 +1,7 @@
 <template>
   <button class="rounded bg-green-500 text-gray-200 p-2" @click="buttonClick">
     <beat-loader :loading="isLoading" :color="'#68d391'" :size="8" />
-    <slot v-show="isLoading"></slot>
+    <span v-show="!isLoading"><slot></slot></span>
   </button>
 </template>
 
