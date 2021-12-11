@@ -6,7 +6,9 @@
           src="@/assets/images/logo.png"
           alt="vuexchange"
           class="inline-block mr-2"
-      /> <span>vuexchange</span> </router-link>
+        />
+        <span>vuexchange</span>
+      </router-link>
     </h1>
     <nav class="w-2/3 flex justify-end">
       <ul class="text-gray-300">
