@@ -1,14 +1,12 @@
 <template>
   <header class="bg-green-600 p-4 flex items-center">
     <h1 class="text-2xl text-gray-200 w-1/3">
-      <a href="/"
+      <router-link :to="{ name: 'home' }"
         ><img
           src="@/assets/images/logo.png"
           alt="vuexchange"
           class="inline-block mr-2"
-        />
-        vuexchange</a
-      >
+      /> <span>vuexchange</span> </router-link>
     </h1>
     <nav class="w-2/3 flex justify-end">
       <ul class="text-gray-300">
